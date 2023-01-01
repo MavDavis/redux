@@ -1,17 +1,10 @@
 import "./App.css";
-import Data from './data'
-import Card from './components/Card'
-import Navbar from "./components/Navbar";
+import Form from "./Components/Form";
+
 function App() {
-  let cards = Data.map((item, ind) =>{
-   return <Card item ={item} key={ind}/>
-  })
   return (
     <div className="App">
-      <Navbar/>
-     <div className="cards">
-      {cards}
-     </div>
+      <Form />
     </div>
   );
 }
