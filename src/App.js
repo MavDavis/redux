@@ -1,16 +1,37 @@
-import React from "react";
-import productsDetails from "./components/productsDetails";
-import ProductsList from "./components/ProductsList";
-import { Routes, Route } from "react-router-dom";
-
-const App = () => {
+import React from 'react';
+import {BrowserRouter as Router, Route, Link, Routes} from 'react-router-dom';
+import { Header } from './components/Header';
+import ProductsList from './components/ProductsList';
+import ProductsDetails from './components/ProductsDetails';
+import './css/App.css'
+export default function App() {
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={<ProductsList />} />
-      </Routes>
-    </div>
-  );
-};
+    <Router>
+      <div>
+     <Header/>
 
-export default App;
+        <Routes>
+       
+          <Route path="/products/:Id" element={<ProductsDetails />} />
+          <Route path="/" element={<ProductsList/>} />
+          <Route
+            path="*"
+            element={
+              <div>
+                <h2>404 Page not found</h2>
+              </div>
+            }
+          />
+        </Routes>
+      </div>
+    </Router>
+  );
+}
+
+
+
+function About() {
+  return <h2>About</h2>;
+}
+
+
