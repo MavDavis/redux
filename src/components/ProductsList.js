@@ -12,7 +12,7 @@ const ProductsList = () => {
     axios.get('https://api.escuelajs.co/api/v1/products').then((res)=> dispatch(setProducts(res.data))).catch(err=>console.log(err))
   }
   return (
-    <div className='ui grid container'>
+    <div className='ui grid container teste' id='teste'>
       <ProductComponent />
     </div>
   )

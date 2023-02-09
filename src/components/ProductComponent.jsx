@@ -3,14 +3,13 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 const ProductComponent = () => {
   const products = useSelector((state) => state.allProducts.products);
-  console.log(products)
 
   const renderList = products.map((product, ind) => {
     const { id, title, images, price, category } = product
     return (
 
-      <div className="four wide column" key={id }>
-        <Link to = {`/products/:${id}`}>
+      <div className="" key={id }>
+        <Link to = {`/products/${id}`}>
         <div className="ui link cards">
           <div className="card">
             <div className="image">

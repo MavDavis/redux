@@ -3,6 +3,7 @@
   padding: 0;
   margin: 0;
 }
+
 .ui.cards > .card > .image {
   height: 250px;
   padding: 20px;
@@ -38,13 +39,22 @@
 .ui.menu.fixed {
   height: 60px;
   padding-top: 15px;
+  max-width: 100vw;
 }
-.ui.grid.container {
-  margin-top: 45px;
+#teste {
+
+padding: 2rem 5%;
+  width: 100vw;
+  margin: 0 auto 3rem;
+  max-width: 1170px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 2rem;
+  position: relative;
+  top: 80px;
 }
-.ui.grid > .row {
-  background: #fff;
-}
+
 .ui.grid > .row > .column.lp {
   padding: 20px 40px 20px 20px;
   align-self: flex-start !important;
